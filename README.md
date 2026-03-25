@@ -29,6 +29,7 @@
 | Skill | 类型 | 适用场景 | 核心能力 |
 | --- | --- | --- | --- |
 | [`volcengine-docker-cd`](./volcengine-docker-cd) | CD / Docker / Deploy | 将任意项目构建为 Docker 镜像并发布到火山引擎镜像仓库，再通过远端 `docker compose` 完成部署与回滚 | 多架构构建、镜像推送、版本 tag 管理、远端部署、回滚、常见问题排查 |
+| [`github-skill-publish`](./github-skill-publish) | Git / GitHub / Skills | 将本地自建 skill 发布到 GitHub skills 仓库，并同步维护仓库 README 与索引 | 仓库检查、克隆、SSH 推送、README 更新、技能目录维护、鉴权排障 |
 
 ## Current Skill Notes
 
@@ -51,6 +52,27 @@
 - 为 Linux 服务器生成标准化 Docker CD 流程
 - 设计可回滚的镜像版本发布策略
 - 输出适合生产环境的 Compose 部署方式
+
+### `github-skill-publish`
+
+这是一个面向 GitHub skills 仓库发布场景的生产级 skill，适用于把本地已经完成的 Codex skill 发布到 GitHub 仓库，并保持仓库级 README 与技能目录可持续维护。
+
+覆盖能力包括：
+
+- 检查目标 GitHub 仓库与默认分支
+- 克隆 skills 仓库到本地工作区
+- 将本地 skill 目录复制进目标仓库
+- 切换 Git 远程到 SSH 并验证 `ssh -T git@github.com`
+- 提交并推送新的 skill
+- 更新仓库首页 README 与技能目录索引
+- 排查 HTTPS/SSH 鉴权、远程地址与推送失败问题
+
+适用场景包括：
+
+- 将新创建的 skill 发布到 GitHub skills 仓库
+- 维护一个持续增长的自建 skills 仓库
+- 统一 skill 发布流程与仓库首页说明
+- 基于 SSH 方式完成 GitHub 推送
 
 ## Roadmap
 

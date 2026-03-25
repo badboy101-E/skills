@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub Skill Publish"
+  short_description: "Publish local skills to GitHub with SSH and repo indexing."
+  default_prompt: "Use $github-skill-publish to publish this local Codex skill to my GitHub skills repository and update the repository README."
