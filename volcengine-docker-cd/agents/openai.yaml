@@ -1,0 +1,4 @@
+interface:
+  display_name: "Volcengine Docker CD"
+  short_description: "Version, publish, deploy, and roll back Docker releases."
+  default_prompt: "Use $volcengine-docker-cd to publish a versioned Docker release to Volcengine and deploy or roll it back with Docker Compose."
