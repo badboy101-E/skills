@@ -30,6 +30,7 @@
 | --- | --- | --- | --- |
 | [`volcengine-docker-cd`](./volcengine-docker-cd) | CD / Docker / Deploy | 将任意项目构建为 Docker 镜像并发布到火山引擎镜像仓库，再通过远端 `docker compose` 完成部署与回滚 | 多架构构建、镜像推送、版本 tag 管理、远端部署、回滚、常见问题排查 |
 | [`github-skill-publish`](./github-skill-publish) | Git / GitHub / Skills | 将本地自建 skill 发布到 GitHub skills 仓库，并同步维护仓库 README 与索引 | 仓库检查、克隆、SSH 推送、README 更新、技能目录维护、鉴权排障 |
+| [`codeup-project-ci-bootstrap`](./codeup-project-ci-bootstrap) | CI / Codeup / Bootstrap | 基于本地已创建项目目录，自动创建中心版 Codeup 远程仓库，初始化 Git，并生成最小 CI 起步文件 | Codeup 建仓、`.env` 读取、Git 初始化、SSH 远程绑定、初始提交与首推、CI 基础骨架生成 |
 
 ## Current Skill Notes
 
@@ -73,6 +74,27 @@
 - 维护一个持续增长的自建 skills 仓库
 - 统一 skill 发布流程与仓库首页说明
 - 基于 SSH 方式完成 GitHub 推送
+
+### `codeup-project-ci-bootstrap`
+
+这是一个面向中心版 Codeup 的生产级 CI 起步 skill，适用于在你已经手动创建好本地项目目录之后，自动完成远程私有仓库创建、本地 Git 初始化、最小 CI 基础文件生成，以及首次推送。
+
+覆盖能力包括：
+
+- 基于当前本地目录名推导并规范化远程仓库名
+- 从项目根目录 `.env` 读取 `YUNXIAO_TOKEN`
+- 调用中心版 Codeup OpenAPI 创建远程私有仓库
+- 初始化本地 Git 仓库并设置 `main`
+- 生成最小 CI 起步文件，例如 `README.md`、`.gitignore`、`.env.example`、`ci/README.md` 和基础脚本
+- 配置 SSH 远程并完成首次提交与推送
+- 排查 `.env` 缺失、`organization_id` 缺失、仓库重名、SSH 推送失败等问题
+
+适用场景包括：
+
+- 在 Codeup 中为新项目自动创建远程仓库
+- 为新项目建立最小可用的 CI 起步结构
+- 把“本地新项目目录”快速变成可进入 CI/CD 的仓库
+- 为后续接入 Docker/CD 流程打基础
 
 ## Roadmap
 

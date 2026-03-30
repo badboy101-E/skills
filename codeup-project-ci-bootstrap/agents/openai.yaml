@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codeup Project CI Bootstrap"
+  short_description: "Create Codeup repos and bootstrap CI-ready projects."
+  default_prompt: "Use $codeup-project-ci-bootstrap to create a Codeup repository from this local project folder, initialize git, and generate the minimal CI starter files."
