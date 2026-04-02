@@ -32,6 +32,14 @@
 | [`github-skill-publish`](./github-skill-publish) | Git / GitHub / Skills | 将本地自建 skill 发布到 GitHub skills 仓库，并同步维护仓库 README 与索引 | 仓库检查、克隆、SSH 推送、README 更新、技能目录维护、鉴权排障 |
 | [`codeup-project-ci-bootstrap`](./codeup-project-ci-bootstrap) | CI / Codeup / Bootstrap | 基于本地已创建项目目录，自动创建中心版 Codeup 远程仓库，初始化 Git，并生成最小 CI 起步文件 | Codeup 建仓、`.env` 读取、Git 初始化、SSH 远程绑定、初始提交与首推、CI 基础骨架生成 |
 
+## External Source Notes
+
+这些条目用于记录“外部技能/工具的源码来源与简要说明”，方便追溯上游仓库，但不代表本仓库已经镜像对应源码。
+
+| Note | 类型 | 说明 |
+| --- | --- | --- |
+| [`larksuite-cli-skills`](./external-sources/larksuite-cli-skills.md) | External Source / Feishu / Lark | 记录飞书官方 `larksuite/cli` 仓库地址，以及其配套 AI agent skills 的来源说明 |
+
 ## Current Skill Notes
 
 ### `volcengine-docker-cd`
