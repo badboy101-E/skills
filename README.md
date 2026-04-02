@@ -31,7 +31,7 @@
 | [`volcengine-docker-cd`](./volcengine-docker-cd) | CD / Docker / Deploy | 将任意项目构建为 Docker 镜像并发布到火山引擎镜像仓库，再通过远端 `docker compose` 完成部署与回滚 | 多架构构建、镜像推送、版本 tag 管理、远端部署、回滚、常见问题排查 |
 | [`github-skill-publish`](./github-skill-publish) | Git / GitHub / Skills | 将本地自建 skill 发布到 GitHub skills 仓库，并同步维护仓库 README 与索引 | 仓库检查、克隆、SSH 推送、README 更新、技能目录维护、鉴权排障 |
 | [`codeup-project-ci-bootstrap`](./codeup-project-ci-bootstrap) | CI / Codeup / Bootstrap | 基于本地已创建项目目录，自动创建中心版 Codeup 远程仓库，初始化 Git，并生成最小 CI 起步文件 | Codeup 建仓、`.env` 读取、Git 初始化、SSH 远程绑定、初始提交与首推、CI 基础骨架生成 |
-| [`larksuite-cli-skills`](./external-sources/larksuite-cli-skills.md) | Feishu / Lark / External Source | 记录飞书官方 `larksuite/cli` 仓库及其配套 AI agent skills 的源码来源、安装入口和用途说明 | 上游仓库定位、技能来源追溯、安装命令记录、官方实现入口说明 |
+| [`larksuite-cli-skills`](./external-sources/larksuite-cli-skills.md) | Feishu / Lark / External Source | 基于飞书官方 `larksuite/cli` README 整理的概述说明，用于理解其 AI agent skills 的定位、场景和主要能力域 | 上游仓库定位、README 概述整理、技能领域总结、Agent 使用链路说明 |
 
 ## Roadmap
 
