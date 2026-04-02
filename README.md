@@ -31,7 +31,7 @@
 | [`volcengine-docker-cd`](./volcengine-docker-cd) | CD / Docker / Deploy | 将任意项目构建为 Docker 镜像并发布到火山引擎镜像仓库，再通过远端 `docker compose` 完成部署与回滚 | 多架构构建、镜像推送、版本 tag 管理、远端部署、回滚、常见问题排查 |
 | [`github-skill-publish`](./github-skill-publish) | Git / GitHub / Skills | 将本地自建 skill 发布到 GitHub skills 仓库，并同步维护仓库 README 与索引 | 仓库检查、克隆、SSH 推送、README 更新、技能目录维护、鉴权排障 |
 | [`codeup-project-ci-bootstrap`](./codeup-project-ci-bootstrap) | CI / Codeup / Bootstrap | 基于本地已创建项目目录，自动创建中心版 Codeup 远程仓库，初始化 Git，并生成最小 CI 起步文件 | Codeup 建仓、`.env` 读取、Git 初始化、SSH 远程绑定、初始提交与首推、CI 基础骨架生成 |
-| [`larksuite-cli-skills`](./external-sources/larksuite-cli-skills.md) | Feishu / Lark / External Source | `larksuite/cli` 是飞书 / Lark 官方维护的命令行工具项目，用于通过统一的 CLI 方式操作飞书开放平台能力。除了命令行工具本身，它还提供一组面向 AI agent 的配套 skills，帮助 agent 在飞书场景下完成配置、认证、文档、消息、日历、云盘、表格等常见任务。 | 上游仓库定位、README 概述整理、技能领域总结、Agent 使用链路说明 |
+| [`larksuite-cli-skills`](./external-sources/larksuite-cli-skills.md) | Feishu / Lark / External Source | `larksuite/cli` 是飞书 / Lark 官方维护的命令行工具项目，用于通过统一的 CLI 方式操作飞书开放平台能力。除了命令行工具本身，它还提供一组面向 AI agent 的配套 skills，帮助 agent 在飞书场景下完成配置、认证、文档、消息、日历、云盘、表格等常见任务。 | 统一调用飞书开放平台能力、支持 AI agent 工作流、覆盖配置认证与文档消息日历云盘表格等常见场景 |
 
 ## Roadmap
 
